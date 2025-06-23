@@ -6,6 +6,7 @@ To perform a TCP SYN scan using Nmap on the local network and identify open port
 
 ## Tools Used
 - Nmap
+- Kali linux
 - Wireshark (optional)
 
 ## Steps Performed
