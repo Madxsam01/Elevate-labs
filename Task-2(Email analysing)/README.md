@@ -1,5 +1,5 @@
 
-# 📄 Phishing Email Analysis Report
+# 📄 Phishing Email Analysis 
 
 ## 🛡️ Task Objective
 To identify phishing indicators in a suspicious email sample by analyzing sender identity, headers, links, language, and formatting.
