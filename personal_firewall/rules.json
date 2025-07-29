@@ -1,0 +1,10 @@
+{
+  "allow": [
+    {"ip": "8.8.8.8", "port": 53, "protocol": "udp"},
+    {"ip": "192.168.1.1", "port": 80, "protocol": "tcp"}
+  ],
+  "block": [
+    {"ip": "123.45.67.89", "port": 22, "protocol": "tcp"},
+    {"ip": "10.10.10.10", "port": 443, "protocol": "tcp"}
+  ]
+}
