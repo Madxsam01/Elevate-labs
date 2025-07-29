@@ -1,58 +1,116 @@
 🔥 Personal Firewall using Python
-This project is a lightweight, customizable personal firewall developed in Python. It allows users to monitor, control, and block incoming or outgoing network traffic based on a set of predefined rules. It supports both command-line and graphical user interface (GUI) modes, making it user-friendly and flexible.
+A lightweight, customizable firewall application built using Python. This project empowers users to monitor and control their network traffic in real-time using user-defined rules. It is designed for personal use, educational purposes, and cybersecurity awareness.
 
-🛠️ Key Features
-Real-time Packet Sniffing: Monitors live incoming and outgoing network packets using Scapy.
+📌 Table of Contents
+Project Overview
 
-Rule-Based Filtering: Traffic can be allowed or blocked based on IP address, port number, and protocol (TCP/UDP), all defined in a JSON file.
+Key Features
 
-GUI for Live Monitoring: A Tkinter-based interface shows real-time packet activity, including whether each packet is allowed or blocked, along with stats.
+Technologies Used
 
-Rule Editor GUI: A simple GUI allows users to add or remove firewall rules without editing JSON manually.
+Project Structure
 
-Logging System: Suspicious or blocked packets are logged with timestamps for auditing and later analysis.
+Setup Instructions
 
-Email Alert System (Optional): Sends an email alert whenever a suspicious packet is blocked.
+Rule Configuration
 
-iptables Integration (Optional for Linux): Automatically applies blocking rules using the Linux firewall (iptables) for system-level security.
+Email Alerts
 
-📁 Project Modules
-firewall.py: Runs the main firewall logic via command-line interface.
+Future Improvements
 
-gui_firewall.py: Provides a GUI that shows live packet data, traffic stats, and integrates logging and alerts.
+Author
 
-gui_rule_editor.py: Allows users to create or update firewall rules through a simple form-based interface.
+License
 
-iptables_manager.py: Automatically applies block rules at the system level using iptables on Linux systems.
+🎯 Project Overview
+The Personal Firewall project is aimed at creating a simple but effective software-based firewall. It can capture and inspect network packets, block unwanted traffic, and alert users about suspicious activity. It also includes a graphical user interface (GUI) for better user interaction and control.
 
-alert_emailer.py: Manages the sending of email alerts for flagged packets.
+🚀 Key Features
+Real-time packet sniffing and monitoring
 
-rules.json: A configuration file that stores user-defined rules in "allow" and "block" categories.
+Rule-based traffic control (allow/block specific IPs, ports, and protocols)
 
-logs/suspicious.log: A log file that records details of blocked or suspicious packets with reasons and timestamps.
+User-friendly GUI for live traffic display
 
-✅ How It Works
-The firewall starts sniffing all network traffic using Scapy.
+Editable rule manager with easy updates
 
-Each packet is checked against the rules defined in rules.json.
+Detailed logging of blocked/suspicious packets
 
-If a packet matches a block rule, it is logged and optionally triggers an email alert.
+Optional email alert system for critical events
 
-If a packet matches an allow rule, it is permitted through.
+Optional system-level integration using iptables (Linux only)
 
-Packets that do not match any rule are blocked by default (configurable).
+🧰 Technologies Used
+Python: Core programming language
 
-GUI users can see all this activity in real-time, including how many packets were allowed or blocked.
+Scapy: For network packet analysis
 
-On Linux, users can apply the same block rules to the system firewall (iptables) for more robust protection.
+Tkinter: For the GUI interface
+
+JSON: For managing rule configuration
+
+SMTP (smtplib): For sending email alerts
+
+iptables: Optional Linux-based traffic filtering
+
+🧩 Project Structure
+CLI Firewall: Main logic that monitors and filters packets
+
+GUI Monitor: Graphical interface for real-time traffic display
+
+Rule Editor: Allows users to add, edit, and remove rules
+
+Email Notifier: Sends alerts when suspicious activity is detected
+
+Log File: Stores blocked or suspicious packet details
+
+iptables Manager: Integrates firewall rules with Linux system
+
+⚙️ Setup Instructions
+Install Python and dependencies
+
+Clone or download the project repository
+
+Launch the firewall (GUI or CLI based on preference)
+
+Edit rules using the rule editor or manually in the rules file
+
+Enable optional email alerts by configuring SMTP settings
+
+(Linux only) Apply rules using iptables for deeper integration
+
+📂 Rule Configuration
+Rules are defined in a JSON file with two main categories:
+
+Allow Rules: Define which packets are safe and should be permitted
+
+Block Rules: Define packets that should be denied and logged
+
+Each rule can include criteria such as IP address, port number, and protocol.
 
 📬 Email Alerts
-The firewall can be configured to send an email every time a packet is blocked. This is useful for detecting unauthorized access attempts, port scans, or intrusion attempts in real-time.
+The firewall includes an optional feature to send email alerts whenever suspicious or blocked packets are detected. This helps users stay informed about potential threats even when away from their system.
 
-📌 Use Cases
-Personal computers for added network security
+To use this feature, users need to configure their email credentials and SMTP settings in the alert system module.
 
-Lightweight intrusion detection on home or lab networks
+💡 Future Improvements
+Integration with a web dashboard for remote access
 
-Educational project for learning about firewalls, networking, and Python
+Real-time analytics and graphical reports
+
+AI-based smart rule suggestions
+
+Geo-location of suspicious IP addresses
+
+System tray application for quick controls
+
+Multi-platform support and optimization
+
+🙋‍♂️ Author
+Sandeep Kumar
+Developer and cybersecurity enthusiast.
+
+
+
+
 
